@@ -15,7 +15,7 @@ class RemakeSteps extends Migration
     {
         Schema::table('steps', function (Blueprint $table) {
             $table->dropColumn('title');
-            $table->dropColumn('achievement_time');
+            //$table->dropColumn('achievement_time');
 
             $table->dropForeign(['user_id']);
             $table->dropColumn('user_id');
