@@ -16,6 +16,7 @@ class ReSteps extends Migration
         Schema::table('steps', function (Blueprint $table) {
             $table->boolean('challenged_flg')->default(false);
            
+            $table->string('achievement_time');///////////
         });
     }
 
