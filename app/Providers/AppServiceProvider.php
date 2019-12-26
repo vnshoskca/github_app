@@ -30,6 +30,9 @@ class AppServiceProvider extends ServiceProvider
                 \Log::info("Query Time:{$query->time}s] $query->sql");
             });
         }
+        elseif (app()->environment('production')) {// 本番環境(Heroku)でhttpsを強制する
+            $url->forceScheme('https');
+        }
         elseif (request()->isSecure()) {// 本番環境(Heroku)でhttpsを強制する
             \URL::forceScheme('https');
         }
