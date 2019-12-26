@@ -17,6 +17,9 @@ class CreateKostepsTable extends Migration
             $table->bigIncrements('id');
             $table->timestamps();
         });
+        Schema::create('steps', function (Blueprint $table) {
+            $table->string('achievement_time');///////////
+        });
     }
 
     /**
