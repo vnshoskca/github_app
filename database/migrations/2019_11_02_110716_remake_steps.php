@@ -15,7 +15,7 @@ class RemakeSteps extends Migration
     {
         Schema::table('steps', function (Blueprint $table) {
             $table->dropColumn('title');
-            $table->dropColumn("achievement_time");
+            //$table->dropColumn("achievement_time");
             $table->dropForeign(['user_id']);
             $table->dropColumn('user_id');
 
@@ -37,7 +37,7 @@ class RemakeSteps extends Migration
     {
         Schema::table('steps', function (Blueprint $table) {
             $table->string('title');
-            $table->string("achievement_time");
+            //$table->string("achievement_time");
             $table->boolean('challenged_flg')->default(false);
             $table->boolean('twitter_flg')->default(false);
             $table->boolean('delete_flg')->default(false);
