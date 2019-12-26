@@ -27,10 +27,12 @@ class ReSteps extends Migration
     public function down()
     {
         Schema::table('steps', function (Blueprint $table) {
-            Schema::table('steps', function (Blueprint $table) {
+            /*
+            Schema::table('steps', function (Blueprint $table) {/////////
                 $table->dropForeign(['category_id']);
                 $table->dropColumn('category_id');
             });
+            */
             $table->renameColumn('achievement_time', 'naiyou0');
             $table->string('naiyou1');
             $table->string('naiyou2');
