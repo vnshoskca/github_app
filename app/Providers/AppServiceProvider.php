@@ -28,9 +28,9 @@ class AppServiceProvider extends ServiceProvider
             \DB::listen(function($query){
                 \Log::info("Query Time:{$query->time}s] $query->sql");
             });
-
-            
-
+        }
+        elseif (\App::environment('production')){// 本番環境(Heroku)でhttpsを強制する 
+            \URL::forceScheme('https');
         }
         Schema::defaultStringLength(191);
     }
