@@ -23,12 +23,15 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(UrlGenerator $url)
     {
         if (config('app.env') !== 'production'){
             \DB::listen(function($query){
                 \Log::info("Query Time:{$query->time}s] $query->sql");
             });
+        }
+        elseif (env('REDIRECT_HTTPS')) {// 本番環境(Heroku)でhttpsを強制する
+            $url->forceSchema('https');
         }
         elseif (app()->environment('production')) {// 本番環境(Heroku)でhttpsを強制する
             $url->forceScheme('https');
