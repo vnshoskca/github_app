@@ -1,0 +1,34 @@
+#l-header{
+    min-height: 50px;
+    width: 100%;
+    .l-navbar{
+        min-height: 50px;
+        background-color: rgb(230, 190, 230);
+        border-radius: 5px;
+        padding: 10px;
+        @include mq(){
+            display: none;
+        }
+        .l-navbar-left{
+            float: left;
+            .l-navbar-nav{
+                float: left;
+            }
+        }
+        .l-navbar-right{
+            float: right;     
+            .l-navbar-nav{
+                float: left;
+            }
+        }
+        .l-nav-item{
+            margin: $space_ss;
+            img{//PCサイトのヘッダー内のimage
+                width: 60px;
+            }
+            .l-nav-link{
+                text-decoration: none;
+            }
+        }
+    }
+}

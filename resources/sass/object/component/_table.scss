@@ -1,0 +1,63 @@
+.c-kostep-attention{
+    color: $red;
+    margin: $space_ss;
+    font-weight: bold;
+}
+.c-br{
+    display: none;
+    @include mq(){
+        display: inline;
+    }
+}
+.c-table{
+    display: table;
+    display: inline-block;
+    margin-bottom: $space_m;
+    
+    .c-thead{
+        display: table-header-group;
+        @include mq(){
+            display: none;
+        }
+    }
+    .c-tbody{
+        display: table-row-group;
+    }
+    .c-tr{
+        display: table-row;
+    }
+    span{
+        display: none;
+    } 
+    .c-th, .c-td{
+        display: table-cell;
+        width: 180px;
+        height: 80px;
+        text-align: center;
+        vertical-align: middle;
+        border:1px solid black;  
+    }
+    .c-th{
+        background-color:#e4c3ce;//////
+    }
+    .c-td{
+        background-color:#d8cee7;//////
+        @include mq(){
+            display: inline-block;
+            width: 350px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            background-color:rgb(230, 190, 230);//////
+            span {
+                display: inline;
+                font-weight: bold;
+            }
+        }
+    }
+    .c-td:last-child{
+        @include mq(){
+            margin-bottom: 50px;
+        }
+    }
+}

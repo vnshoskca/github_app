@@ -1,0 +1,133 @@
+[v-cloak]{
+    display: none;
+}
+#header{
+    display: none;
+    @include mq(){
+        display: block;
+        padding: 14px;
+        background: #f3f3f3;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        z-index: 100;
+    }
+    .l-sp-header-right{
+        @include mq(){
+            position: absolute;
+            top: 0px;
+            right: 30px;
+            min-width: 160px;
+            height: 75px; 
+            z-index: 200;
+        }
+        .l-sp-user{
+            .l-sp-userlist{
+                @include mq(){
+                    margin: 5px;
+                    padding: 5px;
+                    float: left;
+                }
+                img{
+                    @include mq(){
+                        float: left;
+                        width: 60px;
+                    }    
+                }          
+            } 
+        } 
+    }
+    .menu_btn{
+        width: 50px;
+        height: 50px;
+        padding: 4px;
+        .l-menu_trigger{
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;     
+            span:not(:last-child){
+                position: absolute;
+                left: 0;
+                display: block;
+                width: 100%;
+                height: 2px;
+                background: #333;
+                border-radius: 2px;
+                transition: all .4s;
+                &:nth-of-type(1) {
+                    top: 7px;
+                }
+                &:nth-of-type(2) {
+                    top: calc(50% - 1px);
+                }
+                &:nth-of-type(3) {
+                    bottom: 7px;
+                }
+            }
+            span:last-child{
+                position: absolute;
+                left: 60px;
+                top: 15px;
+                font-size: $font-size_l;
+            }
+        }
+        //メニュー開いたとき
+        &.open_{
+            .l-menu_trigger span:nth-of-type(1) {
+                top: calc(50% - 1px);
+                transform: rotate(-45deg);
+            }
+            .l-menu_trigger span:nth-of-type(2) {
+                opacity: 0;
+            }
+            .l-menu_trigger span:nth-of-type(3) {
+                bottom: calc(50% - 1px);
+                transform: rotate(45deg);
+            }
+        }
+    }
+}
+
+#l-sp_menu{
+    display: none;
+    @include mq(){
+        display: block;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+        padding: 5%;
+        background: rgba(0,0,0,0.9);
+        transition: all 0.5s;
+        color: #fff;
+        text-align: center;
+    }
+    &.v-enter, &.v-leave-to {
+        opacity: 0;
+    }
+    .l-nav-item{   
+        @include mq(){
+            margin: 25px;
+        }
+        img{
+            @include mq(){
+                width: 40px;
+            }
+        }
+        .l-nav-link{
+            @include mq(){
+                color: #fff;
+                background-color: rgb(70, 70, 70);
+                text-decoration: none;
+                font-size: $font-size_xl;
+                padding: $space_ss;
+                border-radius: $space_sss;
+            }
+        }
+    }
+}

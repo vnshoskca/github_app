@@ -1,0 +1,49 @@
+.c-button {
+    display: inline-block;
+    margin: $space_sss;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: $indigo;/*ボタン色*/
+    color: $white;
+    border-bottom: solid $space_sss $darklightbule;
+    border-radius: $space_sss;
+}
+.c-button:active {/*ボタンを押したとき*/
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+    border-bottom: none;
+}
+.c-ed{
+    background-color: $red;
+}
+.fa-twitter{
+    height: $space_m;
+    width: $space_m;
+    margin: $space_m;
+    padding: $space_m;
+    line-height: $space_m;
+    color: $white;
+    background: $twitter;
+}
+.c-btn1{
+    position: relative;
+    z-index: 1;
+}
+.c-btn2, .c-btn3{
+    position: absolute;
+    top: 0px;
+    z-index: 10;
+}
+.c-btn2{//challengeボタン
+    left: 507px;
+    @include mq(){
+        left: 165px;
+    }
+}
+.c-btn3{//clearボタン
+    left: 493px;
+    @include mq(){
+        left: 157px;
+    }
+}

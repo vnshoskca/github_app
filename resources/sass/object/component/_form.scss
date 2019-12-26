@@ -1,0 +1,17 @@
+.c-form{
+    margin-bottom: 30px;
+    .c-form-group{
+        background-color: rgb(235, 235, 235);
+        border-radius: 7px;
+        width: 40%;
+        min-height: 22px;
+        margin: 8px auto;
+        padding: 10px;
+        @include mq(){
+            width: 80%;
+        }
+    }
+    .c-form-data{
+        line-height: 22px;
+    } 
+}

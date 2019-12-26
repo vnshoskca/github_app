@@ -1,0 +1,21 @@
+{
+  "Step Register": "STEP登録　",
+  "Title": "タイトル",
+  "Category": "カテゴリー",
+  "Naiyou": "内容",
+  "Login": "ログイン",
+  "Register": "登録する",
+  "Registered.": "登録しました！",
+  "Step List": "STEP一覧　",
+  "Step My List": "MySTEP一覧　",
+  "Go Practice": "挑戦する",
+  "Step Updater": "STEP更新",
+  "Updater": "更新する",
+  "Invalid operation was perfromed.": "不正な操作が行われました",
+  "Go Edit": "編集する",
+  "Deleted.": "削除しました",
+  "Go Delete": "削除する",
+  "User Updater": "ユーザー登録の変更",
+  "Look Detail": "STEPの詳細を見る",
+  "Detail STEP": "STEPの詳細"
+}

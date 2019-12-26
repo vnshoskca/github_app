@@ -1,0 +1,33 @@
+#l-main{
+    margin: 0 auto;
+    padding: 20px;
+    width: $site-width;
+    @include mq(){
+        max-width: $site-width-mq;
+        padding: 15px;
+    }
+    #l-content{
+        margin: 0 auto;  
+        min-height: 300px;
+        width: 100%;
+        text-align: center;
+        .l-container{
+            img{//Homeの画像
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
+        .c-form-group{
+            img{//UserImageの編集
+                width: 200px;
+            }
+        }
+        .l-nav-link{
+            text-decoration: none;
+            &.l-forgot-password{
+                display: inline-block;
+                margin: 20px;
+            }
+        }
+    }
+}
