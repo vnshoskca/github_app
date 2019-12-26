@@ -31,7 +31,7 @@ class AppServiceProvider extends ServiceProvider
             });
         }
         elseif (env('REDIRECT_HTTPS')) {// 本番環境(Heroku)でhttpsを強制する
-            $url->forceSchema('https');
+            $url->forceScheme('https');
         }
         elseif (app()->environment('production')) {// 本番環境(Heroku)でhttpsを強制する
             $url->forceScheme('https');
