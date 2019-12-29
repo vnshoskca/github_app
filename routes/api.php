@@ -44,7 +44,6 @@ Route::prefix('v1')->group(function () {
     //ユーザー情報の変更
     Route::get('/user/prof_edit', 'UsersController@prof_edit');
     Route::post('/user', 'UsersController@prof_update');
-    Route::get('/user/image_edit', 'UsersController@image_edit');
     Route::post('/user/image_update', 'UsersController@image_update');
 
     //マイページ

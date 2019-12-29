@@ -49,7 +49,7 @@
            }
         },
         created() {
-            const uri = `/user/image_edit`;
+            const uri = `/user/prof_edit`;
             this.axios.get(uri).then((response) => {
                 this.user = response.data;
             });

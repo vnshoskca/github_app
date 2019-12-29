@@ -13,9 +13,6 @@
               <li class="l-sp-userlist"><img :src="user.image"></li>
           </ul>
           <ul class="l-sp-user" v-if="$auth.check()">
-              <li class="l-sp-userlist">{{ user.id }}</li>
-          </ul>
-          <ul class="l-sp-user" v-if="$auth.check()">
               <li class="l-sp-userlist">{{ user.name }}</li>
           </ul>
         </span>
@@ -129,12 +126,8 @@
             <li class="l-nav-item"><img :src="user.image"></li>
         </ul>
         <ul class="l-navbar-nav" v-if="$auth.check()">
-            <li class="l-nav-item">{{ user.id }}</li>
-        </ul>
-        <ul class="l-navbar-nav" v-if="$auth.check()">
             <li class="l-nav-item">{{ user.name }}</li>
         </ul>
-      
       <ul class="l-navbar-nav" v-if="$auth.check()">
           <li class="l-nav-item">
             <a class="l-nav-link" href="#" @click.prevent="$auth.logout()">Logout</a>
@@ -180,7 +173,9 @@ const menuBtnComp = {
         const uri = `/user/prof_edit`;
         this.axios.get(uri)
         .then((response) => {
-            this.user = response.data;
+          if(response){
+              this.user = response.data;
+          }    
         })
         .catch(error => {
             console.log('エラー', error);

@@ -14,12 +14,12 @@ use Intervention\Image\ImageManagerStatic as Image;
 class UsersController extends Controller {
 
     public function prof_edit(){//ユーザー登録の変更画面表示
-        $user = Auth::user();
-        return response()->json($user);
-    }
-    public function image_edit(){//ユーザー登録の変更画面表示
-        $user = Auth::user();
-        return response()->json($user);
+        if(!Auth::check()){
+            return redirect('login'); 
+        }else{
+            $user = Auth::user();
+            return response()->json($user);
+        }
     }
   
     public function prof_update(Request $request){//ユーザー登録の変更処理
