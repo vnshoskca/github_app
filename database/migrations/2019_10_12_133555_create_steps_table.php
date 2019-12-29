@@ -14,6 +14,7 @@ class CreateStepsTable extends Migration
     public function up()
     {
         Schema::create('steps', function (Blueprint $table) {
+            
           $table->bigIncrements('id');
           $table->string('title');
           $table->string('category_name');
@@ -21,6 +22,13 @@ class CreateStepsTable extends Migration
           $table->string('naiyou1');
           $table->string('naiyou2');
           $table->timestamps();
+          
+          /*
+          $table->bigIncrements('id');
+          $table->timestamps();
+          $table->string('title');
+          $table->string('achievement_time');
+          */
         });
     }
 

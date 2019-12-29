@@ -25,10 +25,13 @@ class Remake3Steps extends Migration
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('category')->onDelete('cascade');
             */
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->unsignedBigInteger('category_id');
-            $table->foreign('category_id')->references('id')->on('category')->onDelete('cascade');
+            Schema::table('steps', function (Blueprint $table) {
+                DB::statement('DELETE FROM steps');//テーブル削除
+                $table->unsignedBigInteger('user_id');
+                $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+                $table->unsignedBigInteger('category_id');
+                $table->foreign('category_id')->references('id')->on('category')->onDelete('cascade');
+            });
         });
     }
     /**

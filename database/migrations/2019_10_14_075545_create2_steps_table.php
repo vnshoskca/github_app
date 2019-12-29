@@ -13,10 +13,12 @@ class Create2StepsTable extends Migration
      */
     public function up()
     {
+        /*
         Schema::create('stepss', function (Blueprint $table) {
 
           $table->bigIncrements('id');
         });
+        */
     }
 
     /**
@@ -26,6 +28,6 @@ class Create2StepsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('stepss');
+        //Schema::dropIfExists('stepss');
     }
 }

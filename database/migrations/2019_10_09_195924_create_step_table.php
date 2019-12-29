@@ -13,7 +13,8 @@ class CreateStepTable extends Migration
      */
     public function up()
     {
-        Schema::create('step', function (Blueprint $table) {
+        //Schema::create('step', function (Blueprint $table) {
+        /*
           $table->bigIncrements('id');
           $table->string('title');
           $table->string('category_name');
@@ -21,7 +22,8 @@ class CreateStepTable extends Migration
           $table->string('naiyou1');
           $table->string('naiyou2');
           $table->timestamps();
-        });
+          */
+        //});
     }
 
     /**
@@ -31,6 +33,6 @@ class CreateStepTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('step');
+        //Schema::dropIfExists('step');
     }
 }

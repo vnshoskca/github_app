@@ -27,8 +27,8 @@ class AddStepIdToClear extends Migration
     public function down()
     {
         Schema::table('clear', function (Blueprint $table) {
-            $table->dropForeign(['step_id']);
-            //$table->dropColumn('step_id');
+            //$table->dropForeign(['step_id']);
+            $table->dropColumn('step_id');
         });
     }
 }
