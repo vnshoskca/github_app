@@ -16,7 +16,7 @@ class ReSteps extends Migration
         Schema::table('steps', function (Blueprint $table) {
             $table->dropColumn('naiyou1');
             $table->dropColumn('naiyou2');
-            //$table->renameColumn('naiyou0', 'achievement_time');
+            $table->renameColumn('naiyou0', 'achievement_time');
             $table->boolean('delete_flg')->default(false);
            
         });
@@ -30,12 +30,12 @@ class ReSteps extends Migration
     public function down()
     {
         Schema::table('steps', function (Blueprint $table) {
-            /*
+            
             $table->string('naiyou1')->nullable(false);
             $table->string('naiyou2')->nullable(false);
             $table->renameColumn('achievement_time', 'naiyou0');
             $table->dropColumn('delete_flg');
-*/
+
 
 
 

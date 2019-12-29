@@ -53,13 +53,13 @@ class Remake3Steps extends Migration
             $table->dropForeign(['category_id']);
             $table->dropColumn('category_id');
             */
+
             
-            /*
             $table->dropForeign(['user_id']);
             $table->dropColumn('user_id');
             $table->dropForeign(['category_id']);
             $table->dropColumn('category_id');
-            */
+            
         });
     }
 }
