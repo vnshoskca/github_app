@@ -26,8 +26,10 @@ class AddCategoryIdToSteps extends Migration
      */
     public function down()
     {
+        /*
         Schema::table('steps', function (Blueprint $table) {
             $table->string('category_name');
         });
+        */
     }
 }

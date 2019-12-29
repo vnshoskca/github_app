@@ -50,11 +50,13 @@ class RemakeSteps extends Migration
             $table->foreign('category_id')->references('id')->on('category');
             */
             
+            /*
             Schema::table('steps', function (Blueprint $table) {
                 DB::statement('DELETE FROM steps');//テーブル削除
                 $table->unsignedBigInteger('user_id');
                 $table->foreign('user_id')->references('id')->on('users');
             });
+            */
             
         });
     }

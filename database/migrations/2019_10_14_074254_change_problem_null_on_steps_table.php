@@ -26,9 +26,11 @@ class ChangeProblemNullOnStepsTable extends Migration
      */
     public function down()
     {
+        /*
         Schema::table('steps', function (Blueprint $table) {
           $table->string('naiyou1')->nullable(false)->change();
           $table->string('naiyou2')->nullable(false)->change();
         });
+        */
     }
 }

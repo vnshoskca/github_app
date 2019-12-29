@@ -30,11 +30,13 @@ class AddUserIdToSteps extends Migration
      */
     public function down()
     {
+        /*
         Schema::table('steps', function (Blueprint $table) {
             Schema::table('steps', function (Blueprint $table) {
                 $table->dropForeign(['user_id']);
                 $table->dropColumn('user_id');
             });
         });
+        */
     }
 }
