@@ -16,7 +16,7 @@ class ReSteps extends Migration
         Schema::table('steps', function (Blueprint $table) {
             $table->dropColumn('naiyou1');
             $table->dropColumn('naiyou2');
-            $table->renameColumn('naiyou0', 'achievement_time');
+            //$table->renameColumn('naiyou0', 'achievement_time');
             $table->boolean('delete_flg')->default(false);
            
         });
