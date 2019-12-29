@@ -1,11 +1,14 @@
 {
     "private": true,
     "scripts": {
+        "prestart": "next build",
+        "start": "next start -p ${PORT}",
+        /*
         "dev": "node server.js",
         "build": "next build",
         "postinstall": "npm run build",
         "start": "NODE_ENV=production node server.js",
-
+        */
         //"dev": "npm run development",
 
         "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
