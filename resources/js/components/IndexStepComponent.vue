@@ -43,7 +43,7 @@ import ChallengeButton from './ChallengeButtonComponent.vue'
            const uri = '/steps';
            this.axios.get(uri)
            .then(response => {
-               console.log('success', response.data);
+               //console.log('success', response.data);
                this.category = response.data;
            })
             .catch(error => {
