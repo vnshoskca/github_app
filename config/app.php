@@ -194,7 +194,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\ComposerServiceProvider::class,
 
-        Barryvdh\Debugbar\ServiceProvider::class,
+        //Barryvdh\Debugbar\ServiceProvider::class,
         //Barryvdh\Cors\handleCors::class,
         Barryvdh\Cors\ServiceProvider::class,
 
