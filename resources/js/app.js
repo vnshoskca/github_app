@@ -24,7 +24,8 @@ Vue.router = router
 Vue.use(VueRouter) // VueRouterプラグインを使用する これによって<RouterView />コンポーネントなどを使うことができる
 // Set Vue authentication
 Vue.use(VueAxios, axios)
-axios.defaults.baseURL = `${process.env.MIX_APP_URL}/api/v1`
+//axios.defaults.baseURL = `${process.env.MIX_APP_URL}/api/v1`
+axios.defaults.baseURL = process.env.API_BASE_URL;
 Vue.use(VueAuth, auth)
 // Load Index
 Vue.component('index', Index) // ルートコンポーネントをインポートする
