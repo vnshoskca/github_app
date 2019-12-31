@@ -56,7 +56,7 @@ export default {
                     app.success = true
                     location.href = '/mypage';
                 },
-                error: function() {
+                error: function(res) {
                     app.has_error = true
                     app.error = res.response.data.error
                 },
