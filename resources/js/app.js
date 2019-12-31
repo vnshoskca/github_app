@@ -26,7 +26,8 @@ Vue.use(VueRouter) // VueRouterプラグインを使用する これによって
 Vue.use(VueAxios, axios)
 //axios.defaults.baseURL = `${process.env.MIX_APP_URL}/api/v1`
 //axios.defaults.baseURL = `${process.env.API_BASE_URL}/api/v1`;
-axios.defaults.baseURL = `${window.location.origin}/api/v1`;
+//axios.defaults.baseURL = `${window.location.origin}/api/v1`;
+axios.defaults.baseURL = `${window.location.origin}`;
 Vue.use(VueAuth, auth)
 // Load Index
 Vue.component('index', Index) // ルートコンポーネントをインポートする
