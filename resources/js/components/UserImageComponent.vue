@@ -18,7 +18,7 @@
                 <div class="c-form-group" v-bind:class="{ 'has-error': has_error && errors.image }">
                     <div class="c-form-data"><label for="image">User Image</label></div>
                     <div class="c-form-data"><img :src="user.image"></div>
-                    <div class="c-form-data"><input type="file" ref="file" class="c-form-control" accept="image/*" @change="onFileChange($event)"></div>
+                    <div class="c-form-data"><input type="file" ref="file" name="image" class="c-form-control" accept="image/*" @change="onFileChange($event)"></div>
                     <span v-if="has_error && errors.image">{{ errors.image }}</span>
                 </div>
 
