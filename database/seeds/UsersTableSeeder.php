@@ -20,6 +20,8 @@ class UsersTableSeeder extends Seeder
                 'password' => bcrypt('password'),
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
+                'image' => null,
+                'introduction' => null,
             ],
             [
                 'name' => 'pp',
@@ -27,6 +29,8 @@ class UsersTableSeeder extends Seeder
                 'password' => bcrypt('password'),
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
+                'image' => null,
+                'introduction' => null,
             ],
             [
                 'name' => 'qq',
@@ -34,6 +38,8 @@ class UsersTableSeeder extends Seeder
                 'password' => bcrypt('password'),
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
+                'image' => null,
+                'introduction' => null,
             ],
         ]);
     }
