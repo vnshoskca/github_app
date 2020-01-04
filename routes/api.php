@@ -18,7 +18,7 @@ Route::prefix('v1')->group(function () {
         // Create New User
         Route::post('register', 'AuthController@register');
         // Login User
-        Route::post('login', 'AuthController@login');
+        Route::get('login', 'AuthController@login');
         // Refresh the JWT Token
         Route::get('refresh', 'AuthController@refresh');
         // Send reset password mail
