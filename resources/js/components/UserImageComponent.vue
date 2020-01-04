@@ -22,7 +22,8 @@
                     <span v-if="has_error && errors.image">{{ errors.image }}</span>
                 </div>
 
-                <img src="data:image/png;base64,<?= $image ?>">
+                <!--<img src="data:image/png;base64,<?= $image ?>">-->
+                <img src="data:storage/user_image/png;base64,<?= $image ?>">
 
                 <div class="c-form-group" v-if="imageData">
                     <div class="c-form-data"><label>Selected Image</label></div>
