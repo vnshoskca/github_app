@@ -20,7 +20,10 @@
                     <div class="c-form-data"><img :src="user.image"></div>
                     <div class="c-form-data"><input type="file" ref="file" class="c-form-control" accept="image/*" @change="onFileChange($event)"></div>
                     <span v-if="has_error && errors.image">{{ errors.image }}</span>
-                </div>    
+                </div>
+
+                <img src="data:image/png;base64,<?= $image ?>">
+
                 <div class="c-form-group" v-if="imageData">
                     <div class="c-form-data"><label>Selected Image</label></div>
                     <div class="c-form-data"><img :src="imageData" v-if="imageData"></div>

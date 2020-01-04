@@ -42,7 +42,8 @@ class UsersController extends Controller {
     public function image_update(Request $request){//ユーザーImageの変更処理
         if(!Auth::check()){
             return redirect('login'); 
-        }else{ 
+        }else{
+            /*
             $request->validate([//空でない|アップロードに成功したfile|mines指定|サイズ制限
                 'image' => 'filled|file|image|dimensions:min_width=20,min_height=20,max_width=1500,max_height=1500',
             ]);
@@ -51,6 +52,14 @@ class UsersController extends Controller {
             $user = Auth::user();
             $user->update(['image' => '/storage/'.$image_name]);
             return response()->json($user);
+            */
+            
+            //POSTされた画像ファイルデータ取得しbase64でエンコードする
+            $image = base64_encode(file_get_contents($request->image->getRealPath()));
+            // base64エンコードしたバイナリデータを格納
+            Model::insert([
+                "image" => $image
+            ]);
         }
     }
 }
