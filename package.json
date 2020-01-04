@@ -36,9 +36,9 @@
         "vuex": "^3.1.1"
     },
     "dependencies": {
-        //"@nuxtjs/dotenv": "^1.4.1",
+        "@nuxtjs/dotenv": "^1.4.1",
         "@websanova/vue-auth": "^2.21.14-beta",
-        //"babel-loader": "^8.0.6",
+        "babel-loader": "^8.0.6",
         "es6-promise": "^4.2.8",
         "vue-axios": "^2.1.5",
         "vue-paginate": "^3.6.0",
