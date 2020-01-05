@@ -16,7 +16,7 @@
         <!--userimageの編集-->
 
         <form action="" @submit.prevent="upload" method="post" enctype="multipart/form-data">
-            <input type="file" name="file">
+            <input type="file" name="image">
             <button type="submit">保存</button>
         </form>
 
