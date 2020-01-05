@@ -80,7 +80,7 @@ class UsersController extends Controller {
         $post->save();
         return redirect('/');
         */
-        $file = $request->file('file');
+        $file = $request->file('image');
         // 第一引数はディレクトリの指定
         // 第二引数はファイル
         // 第三引数はpublickを指定することで、URLによるアクセスが可能となる
