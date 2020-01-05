@@ -45,7 +45,7 @@ Route::prefix('v1')->group(function () {
     Route::get('/user/prof_edit', 'UsersController@prof_edit');
     Route::post('/user', 'UsersController@prof_update');
     Route::post('/user/image_update', 'UsersController@image_update');
-    Route::post('/user/upload', 'UsersController@upload');
+    Route::post('/user/upload', 'UsersController@upload')->name('user.upload');
 
     //マイページ
     Route::get('/mypage', 'StepController@mypage');

@@ -15,7 +15,7 @@
 
         <!--userimageの編集-->
 
-        <form action="" @submit.prevent="upload" method="post" enctype="multipart/form-data">
+        <form action="{{ route('user.upload') }}" method="post" enctype="multipart/form-data">
             <input type="file" name="file">
             <button type="submit">保存</button>
         </form>
@@ -99,8 +99,8 @@
                 }).catch(error => {
                     console.log('エラー', error)
                 });
-            },
-            
+            }//,
+            /*
             upload() {//userimageの更新2
                 const uri = `/user/upload`;
                 //const formData = new FormData();
@@ -114,7 +114,7 @@
                     console.log('エラー', error)
                 });
             }
-            
+            */
         }
     }
 </script>
