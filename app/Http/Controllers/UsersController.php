@@ -53,7 +53,7 @@ class UsersController extends Controller {
             $user->update(['image' => '/storage/'.$image_name]);
             return response()->json($user);
             */
-            $file = $request->file('file');
+            $file = $request->file('image');
             // 第一引数はディレクトリの指定
             // 第二引数はファイル
             // 第三引数はpublickを指定することで、URLによるアクセスが可能となる
