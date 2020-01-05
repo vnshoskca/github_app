@@ -67,7 +67,7 @@ class UsersController extends Controller {
         $post = new User;
         $form = $request->all();
         //s3アップロード開始
-        $image = $request->file('image');
+        $image = $request->file('file');
         // バケットの`myprefix`フォルダへアップロード
         $path = Storage::disk('s3')->putFile('myprefix', $image, 'public');
         // アップロードした画像のフルパスを取得
