@@ -13,6 +13,13 @@
             <p v-else>Error, can not edit a kostep at the moment. If the problem persists, please contact edit a kostep.</p>
         </div>
         <!--userimageの編集-->
+
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            {{ csrf_field() }}
+        <input type="file" name="file">
+        <button type="submit">保存</button>
+        </form>
+
        <form action="" method="post" @submit.prevent="updateImage" enctype="multipart/form-data">
            <div class="c-form">        
                 <div class="c-form-group" v-bind:class="{ 'has-error': has_error && errors.image }">
