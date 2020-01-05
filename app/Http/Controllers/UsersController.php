@@ -53,13 +53,17 @@ class UsersController extends Controller {
             $user->update(['image' => '/storage/'.$image_name]);
             return response()->json($user);
             */
-
-            //POSTされた画像ファイルデータ取得しbase64でエンコードする
-            $image = base64_encode(file_get_contents($request->image->getRealPath()));
-            // base64エンコードしたバイナリデータを格納
-            Model::insert([
-                "image" => $image
-            ]);
+            $file = $request->file('image');
+            // 第一引数はディレクトリの指定
+            // 第二引数はファイル
+            // 第三引数はpublickを指定することで、URLによるアクセスが可能となる
+            $path = Storage::disk('s3')->putFile('/', $file, 'public');
+            // hogeディレクトリにアップロード
+            // $path = Storage::disk('s3')->putFile('/hoge', $file, 'public');
+            // ファイル名を指定する場合はputFileAsを利用する
+            // $path = Storage::disk('s3')->putFileAs('/', $file, 'hoge.jpg', 'public');
+            return redirect('/');
+            
         }
     }
 

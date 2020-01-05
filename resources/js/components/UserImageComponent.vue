@@ -15,8 +15,8 @@
 
         <!--userimageの編集-->
 
-        <form action="{{ route('user.upload') }}" method="post" enctype="multipart/form-data">
-            <input type="file" name="file">
+        <form action="" @submit.prevent="updateImage" method="post" enctype="multipart/form-data">
+            <input type="file" name="image">
             <button type="submit">保存</button>
         </form>
 
