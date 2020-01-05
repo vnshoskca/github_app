@@ -15,7 +15,7 @@
 
         <!--userimageの編集-->
 
-        <form action="{{ action('UsersController@upload') }}" method="post" enctype="multipart/form-data">
+        <form action="" @submit.prevent="upload" method="post" enctype="multipart/form-data">
             <input type="file" name="file">
             <button type="submit">保存</button>
         </form>
@@ -99,22 +99,22 @@
                 }).catch(error => {
                     console.log('エラー', error)
                 });
-            }//,
-            /*
+            },
+            
             upload() {//userimageの更新2
-                const uri = `/user/image_update`;
-                const formData = new FormData();
-                formData.append('file',this.fileInfo);
-                console.log(formData);
-                this.axios.post(uri, formData)
+                const uri = `/user/upload`;
+                //const formData = new FormData();
+                //formData.append('file',this.fileInfo);
+                //console.log(formData);
+                this.axios.post(uri)
                 .then((response) => {
                     console.log('success', response.data);
-                    location.href = '/user/prof_edit';
+                    //location.href = '/user/prof_edit';
                 }).catch(error => {
                     console.log('エラー', error)
                 });
             }
-            */
+            
         }
     }
 </script>
