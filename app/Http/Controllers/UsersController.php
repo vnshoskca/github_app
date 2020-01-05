@@ -71,7 +71,7 @@ class UsersController extends Controller {
         // バケットの`myprefix`フォルダへアップロード
         $path = Storage::disk('s3')->putFile('myprefix', $image, 'public');
         // アップロードした画像のフルパスを取得
-        $post->image_path = Storage::disk('s3')->url($path);
+        $post->image = Storage::disk('s3')->url($path);
         $post->save();
         return redirect('/');
     }
