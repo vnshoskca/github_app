@@ -12,12 +12,12 @@
             <p v-if="error == 'registration_validation_error'">Validation Errors.</p>
             <p v-else>Error, can not edit a kostep at the moment. If the problem persists, please contact edit a kostep.</p>
         </div>
+
         <!--userimageの編集-->
 
         <form action="/upload" method="post" enctype="multipart/form-data">
-            {{ csrf_field() }}
-        <input type="file" name="file">
-        <button type="submit">保存</button>
+            <input type="file" name="file">
+            <button type="submit">保存</button>
         </form>
 
        <form action="" method="post" @submit.prevent="updateImage" enctype="multipart/form-data">
@@ -99,7 +99,22 @@
                 }).catch(error => {
                     console.log('エラー', error)
                 });
+            }//,
+            /*
+            upload() {//userimageの更新2
+                const uri = `/user/image_update`;
+                const formData = new FormData();
+                formData.append('file',this.fileInfo);
+                console.log(formData);
+                this.axios.post(uri, formData)
+                .then((response) => {
+                    console.log('success', response.data);
+                    location.href = '/user/prof_edit';
+                }).catch(error => {
+                    console.log('エラー', error)
+                });
             }
+            */
         }
     }
 </script>
